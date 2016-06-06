@@ -23,7 +23,7 @@ public class FullScreenImageGalleryActivity extends AppCompatActivity implements
     private int mPosition;
     private static FullScreenImageGalleryAdapter.FullScreenImageLoader sFullScreenImageLoader;
 
-    private Toolbar mToolbar;
+    //private Toolbar mToolbar;
     private ViewPager mViewPager;
     // endregion
 
@@ -59,10 +59,10 @@ public class FullScreenImageGalleryActivity extends AppCompatActivity implements
 
         bindViews();
 
-        setSupportActionBar(mToolbar);
-        ActionBar actionBar = getSupportActionBar();
+        //setSupportActionBar(mToolbar);
+/*        ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);*/
 
 
         Intent intent = getIntent();
@@ -106,7 +106,7 @@ public class FullScreenImageGalleryActivity extends AppCompatActivity implements
     // region Helper Methods
     private void bindViews() {
         mViewPager = (ViewPager) findViewById(R.id.vp);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        //mToolbar = (Toolbar) findViewById(R.id.toolbar);
     }
 
     private void setUpViewPager() {
@@ -126,10 +126,10 @@ public class FullScreenImageGalleryActivity extends AppCompatActivity implements
         if (mViewPager != null && mImages.size() > 1) {
             int totalPages = mViewPager.getAdapter().getCount();
 
-            ActionBar actionBar = getSupportActionBar();
+/*            ActionBar actionBar = getSupportActionBar();
             if(actionBar != null){
                 actionBar.setTitle(String.format("%d/%d", (position + 1), totalPages));
-            }
+            }*/
         }
     }
 
